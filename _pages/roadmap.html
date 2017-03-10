@@ -31,6 +31,9 @@ excerpt: Find out what's happening soon, and not-so-soon...
             <div class="section-header">
                 <h2 class="section-label">
                     <a data-toggle="collapse" class="{% if section.current == false %}collapsed{% endif %}" data-target="#{{ section.id }}-body">{{ section.name }}</a>
+                    {% if section.current %}
+                    <span class="current-series">(current release series)</span>
+                    {% endif %}
                 </h2>
             </div>
             <div class="section-body collapse {% if section.released != true %}in{% endif %} container" id="{{ section.id }}-body">

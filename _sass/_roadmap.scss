@@ -8,8 +8,14 @@
   color: $blog-list-header-color;
 }
 
+
 #roadmap .row.summary {
   margin-bottom: 40px;
+}
+
+#roadmap .section .section-header span.current-series {
+  font-size: 15px;
+  margin-left: 15px;
 }
 
 #roadmap .section .section-header a.collapsed:before {
