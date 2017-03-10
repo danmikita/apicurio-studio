@@ -4,6 +4,20 @@ permalink: /download/
 layout: page
 excerpt: Download the API Design Studio quickstart and get started fast!
 ---
+{% assign releases = site.github.releases | sort:published_at %}
+{% assign ctag = site.version | prepend: "v" %}
+{% assign casset = (site.version | prepend: "api-design-studio-") | append: "-quickstart.zip" %}
+{% for release in releases %}
+  {% if release.tag_name == ctag %}
+    {% assign therelease = release %}
+    {% for asset in release.assets %}
+      {% if asset.name == casset %}
+        {% assign theasset = asset %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
 
 <div class="container" id="download">
     <div id="content" class="row">
@@ -16,7 +30,9 @@ excerpt: Download the API Design Studio quickstart and get started fast!
             <div class="col-lg-7">
                 <h3>Download & Install</h3>
                 <ol>
-                    <li><a href="https://github.com/apiman/apiman-studio/releases/download/v{{ site.version }}/api-design-studio-{{ site.version }}-quickstart.zip">API Design Studio v{{ site.version }}</a></li>
+                    <li>
+                        <a href="{{ theasset.browser_download_url }}">API Design Studio {{ therelease.tag_name }}</a>
+                    </li>
                     <li>Unpack the API Design Studio Quickstart zip</li>
                 </ol>
 
@@ -24,7 +40,7 @@ excerpt: Download the API Design Studio quickstart and get started fast!
                 <ol>
                     <li>Start Tomcat</li>
                     <li>
-                        Point your browser at the <a href="http://localhost:8080/" rel="nofollow" target="_blank">API Design Studio</a> and login with your GitHub credentials!
+                        Point your browser at the <a href="http://localhost:8080/" rel="nofollow" target="_blank">API Design Studio</a> and login with your <strong>GitHub</strong> credentials!
                     </li>
                 </ol>
 
@@ -39,8 +55,8 @@ excerpt: Download the API Design Studio quickstart and get started fast!
                 <pre class="code-block">
 mkdir ~/api-design-studio-{{ site.version }}
 cd ~/api-design-studio-{{ site.version }}
-curl -L https://github.com/apiman/apiman-studio/releases/download/v{{ site.version }}/api-design-studio-{{ site.version }}-quickstart.zip -o api-design-studio-{{ site.version }}-quickstart.zip
-unzip api-design-studio-{{ site.version }}-quickstart.zip
+curl -L {{ theasset.browser_download_url }} -o {{ theasset.name }}
+unzip {{ theasset.name }}
 cd apache-tomcat-8.5.11
 ./bin/catalina.sh run
 </pre>

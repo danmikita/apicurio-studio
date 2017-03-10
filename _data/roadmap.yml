@@ -1,0 +1,103 @@
+- name: Tech Preview
+  id: techpreview
+  current: true
+  released: false
+  categories:
+  - name: Dashboard
+    tasks:
+      - name: Most recent APIs
+        released: v0.0.2
+      - name: Links to project resources
+        released: v0.0.2
+      - name: Links to create/add APIs
+        released: v0.0.2
+  - name: Managing the list of APIs
+    tasks:
+      - name: List all APIs
+        released: v0.0.2
+      - name: Create a new API (empty)
+        released: v0.0.2
+      - name: Add an existing API
+        released: v0.0.2
+      - name: Remove an API from the Studio
+        released: v0.0.2
+      - name: API details (dashboard)
+        released: v0.0.2
+      - name: Show "Top Collaborators" information
+        released: v0.0.2
+  - name: API Designer
+    tasks:
+      - name: Add/remove paths (endpoints)
+        released: v0.0.2
+      - name: Add/remove Definitions (types)
+        released: v0.0.2
+      - name: Create new Definition from JSON sample
+        released: v0.0.2
+      - name: Inline editing of Name, Description, Version
+        released: v0.0.2
+      - name: Inline editing of Contact Info, License, Terms of Service
+      - name: Manage Tags
+      - name: Manage Security Definitions
+      - name: Configure available Operations for a path
+        released: v0.0.2
+      - name: Inline editing of Name, Description of Operation
+        released: v0.0.2
+      - name: Configure Operation's request body
+        released: v0.0.2
+      - name: Add/remove Operation query parameters
+        released: v0.0.2
+      - name: Add/remove Operation responses
+        released: v0.0.2
+      - name: Configure Operation's path parameters (description & type only)
+        released: v0.0.2
+      - name: Source tab support for Paths, Operations, Responses
+      - name: Source tab support for Definitions
+        released: v0.0.2
+      - name: Configure Path Parameters for all Operations concurrently
+      - name: Support for more inline Type options (e.g. Array of...)
+  - name: Back-End
+    tasks:
+      - name: Use GitHub directly (for authentication and i/o)
+        released: v0.0.2
+
+- name: Beta
+  id: beta
+  current: false
+  released: false
+  categories:
+  - name: Dashboard
+    tasks:
+  - name: Managing the list of APIs
+    tasks:
+      - name: Filter by API tags (tags configured in the API Designer)
+      - name: Audit logging (per API)
+      - name: Optional commit API changes to branch rather than master
+  - name: API Designer
+    tasks:
+      - name: Design tab support for Definitions (constrained)
+      - name: API validation against the OpenAPI specification
+      - name: Support for re-usable Responses (Add, Remove, Reference)
+      - name: Improved support for creating Definitions from samples
+
+- name: 1.x Final
+  id: final1x
+  current: false
+  released: false
+  categories:
+  - name: Dashboard
+    tasks:
+  - name: Managing the list of APIs
+    tasks:
+  - name: API Designer
+    tasks:
+      - name: Support for OpenAPI 3.0
+      - name: Refactoring options (e.g. rename Definition)
+      - name: Support for Undo/Redo (with UI)
+      - name: Add "Find Usages" functionality (e.g. find all usages of a Definition)
+  - name: Back-End
+    tasks:
+      - name: Back-end REST API instead of direct GitHub access
+      - name: Proper GitHub authentication Web Flow
+      - name: Java based back-end implementation of REST API
+      - name: Pluggable back-end persistence layer (default JDBC)
+      - name: Supported platform - WildFly
