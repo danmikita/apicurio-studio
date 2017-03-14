@@ -57,7 +57,7 @@ mkdir ~/api-design-studio-{{ site.version }}
 cd ~/api-design-studio-{{ site.version }}
 curl -L {{ theasset.browser_download_url }} -o {{ theasset.name }}
 unzip {{ theasset.name }}
-cd apache-tomcat-8.5.11
+cd apache-tomcat-{{ site.tomcat_version }}
 ./bin/catalina.sh run
 </pre>
             </div>
