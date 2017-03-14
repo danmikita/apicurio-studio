@@ -3,8 +3,13 @@ permalink: /
 layout: page
 ---
 
-{% assign lr = ((site.github.releases | sort:published_at) | limit:1)[0] %}
-{% assign latestRelease = lr[0] %}
+{% assign releases = site.github.releases %}
+{% assign ctag = site.version | prepend: "v" %}
+{% for release in releases %}
+  {% if release.tag_name == ctag %}
+    {% assign latestRelease = release %}
+  {% endif %}
+{% endfor %}
 
 <div class="jumbotron">
     <div class="tagline tagline-1">

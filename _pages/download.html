@@ -4,7 +4,7 @@ permalink: /download/
 layout: page
 excerpt: Download the API Design Studio quickstart and get started fast!
 ---
-{% assign releases = site.github.releases | sort:published_at %}
+{% assign releases = site.github.releases %}
 {% assign ctag = site.version | prepend: "v" %}
 {% assign casset = (site.version | prepend: "api-design-studio-") | append: "-quickstart.zip" %}
 {% for release in releases %}
@@ -17,7 +17,6 @@ excerpt: Download the API Design Studio quickstart and get started fast!
     {% endfor %}
   {% endif %}
 {% endfor %}
-
 
 <div class="container" id="download">
     <div id="content" class="row">
@@ -57,7 +56,7 @@ mkdir ~/api-design-studio-{{ site.version }}
 cd ~/api-design-studio-{{ site.version }}
 curl -L {{ theasset.browser_download_url }} -o {{ theasset.name }}
 unzip {{ theasset.name }}
-cd apache-tomcat-{{ site.tomcat_version }}
+cd apache-tomcat-{{ site.quickstart.tomcat_version }}
 ./bin/catalina.sh run
 </pre>
             </div>
