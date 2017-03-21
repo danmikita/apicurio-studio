@@ -3,7 +3,7 @@ description: 'Web-Based Open Source API Design via the OpenAPI specification.'
 url: 'http://www.apidesigner.org'
 version: 0.0.4
 quickstart:
-    tomcat_version: 0.0.4
+    tomcat_version: 8.5.12
 twitter_username: APIDesignStudio
 github_username: apiman
 github_url: https://github.com/apiman/apiman-studio
