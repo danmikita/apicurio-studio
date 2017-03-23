@@ -35,8 +35,12 @@
         released: v0.0.2
       - name: Inline editing of Name, Description, Version
         released: v0.0.2
-      - name: Inline editing of Contact Info, License, Terms of Service
+      - name: Editing of Contact Info
+      - name: Editing of License
+        released: v0.0.4
+      - name: Editing of Terms of Service
       - name: Manage Tags
+        released: v0.0.4
       - name: Manage Security Definitions
       - name: Configure available Operations for a path
         released: v0.0.2
@@ -51,6 +55,7 @@
       - name: Configure Operation's path parameters (description & type only)
         released: v0.0.2
       - name: Source tab support for Paths, Operations, Responses
+        released: v0.0.4
       - name: Source tab support for Definitions
         released: v0.0.2
       - name: Configure Path Parameters for all Operations concurrently
