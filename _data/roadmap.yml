@@ -38,7 +38,6 @@
       - name: Editing of Contact Info
       - name: Editing of License
         released: v0.0.4
-      - name: Editing of Terms of Service
       - name: Manage Tags
         released: v0.0.4
       - name: Manage Security Definitions
@@ -79,6 +78,7 @@
       - name: Optional commit API changes to branch rather than master
   - name: API Designer
     tasks:
+      - name: Editing of Terms of Service
       - name: Design tab support for Definitions (constrained)
       - name: API validation against the OpenAPI specification
       - name: Support for re-usable Responses (Add, Remove, Reference)
