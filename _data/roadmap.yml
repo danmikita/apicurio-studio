@@ -1,7 +1,7 @@
 - name: Tech Preview
   id: techpreview
-  current: true
-  released: false
+  current: false
+  released: true
   categories:
   - name: Dashboard
     tasks:
@@ -36,11 +36,13 @@
       - name: Inline editing of Name, Description, Version
         released: v0.0.2
       - name: Editing of Contact Info
+        released: v0.0.5
       - name: Editing of License
         released: v0.0.4
       - name: Manage Tags
         released: v0.0.4
       - name: Manage Security Definitions
+        released: v0.0.5
       - name: Configure available Operations for a path
         released: v0.0.2
       - name: Inline editing of Name, Description of Operation
@@ -58,7 +60,9 @@
       - name: Source tab support for Definitions
         released: v0.0.2
       - name: Configure Path Parameters for all Operations concurrently
+        released: v0.0.5
       - name: Support for more inline Type options (e.g. Array of...)
+        released: v0.0.5
   - name: Back-End
     tasks:
       - name: Use GitHub directly (for authentication and i/o)
@@ -66,7 +70,7 @@
 
 - name: Beta
   id: beta
-  current: false
+  current: true 
   released: false
   categories:
   - name: Dashboard
