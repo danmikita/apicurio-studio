@@ -34,6 +34,9 @@ excerpt: Find out what's happening soon, and not-so-soon...
                     {% if section.current %}
                     <span class="current-series">(current release series)</span>
                     {% endif %}
+                    {% if section.released %}
+                    <span class="released-series">[released]</span>
+                    {% endif %}
                 </h2>
             </div>
             <div class="section-body collapse {% if section.released != true %}in{% endif %} container" id="{{ section.id }}-body">

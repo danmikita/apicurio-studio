@@ -86,7 +86,6 @@
       - name: Design tab support for Definitions (constrained)
       - name: API validation against the OpenAPI specification
       - name: Support for re-usable Responses (Add, Remove, Reference)
-      - name: Improved support for creating Definitions from samples
 
 - name: 1.x Final
   id: final1x
