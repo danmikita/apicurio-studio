@@ -68,13 +68,12 @@
       - name: Use GitHub directly (for authentication and i/o)
         released: v0.0.2
 
+
 - name: Beta
   id: beta
   current: true 
   released: false
   categories:
-  - name: Dashboard
-    tasks:
   - name: Managing the list of APIs
     tasks:
       - name: Filter by API tags (tags configured in the API Designer)
@@ -87,15 +86,12 @@
       - name: API validation against the OpenAPI specification
       - name: Support for re-usable Responses (Add, Remove, Reference)
 
+
 - name: 1.x Final
   id: final1x
   current: false
   released: false
   categories:
-  - name: Dashboard
-    tasks:
-  - name: Managing the list of APIs
-    tasks:
   - name: API Designer
     tasks:
       - name: Support for OpenAPI 3.0
