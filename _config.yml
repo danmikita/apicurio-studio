@@ -7,6 +7,7 @@ github_username: apiman
 github_url: https://github.com/apiman/apiman-studio
 email: apiman-user@lists.jboss.org
 future: true
+quickstart: true
 excerpt_separator: '---'
 gems:
     - jekyll-redirect-from
