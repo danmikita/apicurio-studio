@@ -102,6 +102,11 @@
             <artifactId>keycloak-adapter-spi</artifactId>
             <scope>provided</scope>
         </dependency>
+		<dependency>
+			<groupId>org.wildfly.swarm</groupId>
+			<artifactId>keycloak</artifactId>
+		</dependency>
+
 
 		<!-- Test Only Dependencies -->
 		<dependency>

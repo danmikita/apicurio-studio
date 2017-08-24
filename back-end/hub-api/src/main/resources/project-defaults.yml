@@ -1,0 +1,10 @@
+swarm:
+  deployment:
+    apicurio-studio-api.war:
+      web:
+        login-config:
+          auth-method: KEYCLOAK
+        security-constraints:
+          - url-pattern: /apicurio-api
+            methods: [GET]
+            roles: [admin]
