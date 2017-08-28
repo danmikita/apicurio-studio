@@ -31,6 +31,8 @@ import org.keycloak.KeycloakSecurityContext;
 import org.keycloak.representations.AccessToken;
 
 import io.apicurio.studio.shared.beans.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This is a simple filter that extracts authentication information from the 
@@ -38,6 +40,8 @@ import io.apicurio.studio.shared.beans.User;
  * @author eric.wittmann@gmail.com
  */
 public class KeycloakAuthenticationFilter implements Filter {
+
+    private static Logger logger = LoggerFactory.getLogger(KeycloakAuthenticationFilter.class);
 
     @Inject
     private ISecurityContext security;
@@ -57,7 +61,13 @@ public class KeycloakAuthenticationFilter implements Filter {
             throws IOException, ServletException {
         HttpServletRequest httpReq = (HttpServletRequest) request;
         KeycloakSecurityContext session = getSession(httpReq);
+
+        logger.debug("Inside KeycloakAuthenticationFilter.doFilter: " + httpReq.toString());
+
         if (session != null) {
+
+            logger.debug("Inside KeycloakAuthenticationFilter.doFilter session check: " + session.toString());
+
             // Fabricate a User object from information in the access token and store it in the security context.
             AccessToken token = session.getToken();
             if (token != null) {
