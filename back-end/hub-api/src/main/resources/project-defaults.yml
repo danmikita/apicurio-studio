@@ -8,3 +8,5 @@ swarm:
           - url-pattern: /apicurio-api
             methods: [GET]
             roles: [admin]
+
+  logging: DEBUG
