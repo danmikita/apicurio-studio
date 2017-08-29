@@ -191,6 +191,7 @@
 				  </config>
 			  </enricher>
 		  </configuration>
-      </plugin></plugins>
+      </plugin>
+	</plugins>
 	</build>
 </project>
