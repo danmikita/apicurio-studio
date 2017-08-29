@@ -167,8 +167,8 @@
             <id>fmp</id>
             <goals>
               <goal>resource</goal>
-              <goal>helm</goal>
               <goal>build</goal>
+              <goal>deploy</goal>
             </goals>
           </execution>
         </executions>
@@ -179,11 +179,14 @@
 				  </includes>
 			  </generator>
 			  <enricher>
+				  <includes>
+					  <include>fmp-service</include>
+				  </includes>
 				  <config>
 					  <fmp-service>
-						  <name>myservice</name>
 						  <type>NodePort</type>
-						  <port>80:8080</port>
+						  <port>80</port>
+						  <expose>true</expose>
 					  </fmp-service>
 				  </config>
 			  </enricher>
