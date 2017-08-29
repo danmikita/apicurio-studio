@@ -146,6 +146,40 @@
                     </webResources>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>fabric8-maven-plugin</artifactId>
+                <version>3.5.25</version>
+                <executions>
+                    <execution>
+                        <id>fmp</id>
+                        <goals>
+                            <goal>resource</goal>
+                            <goal>build</goal>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <generator>
+                        <includes>
+                            <include>wildfly-swarm</include>
+                        </includes>
+                    </generator>
+                    <enricher>
+                        <includes>
+                            <include>fmp-service</include>
+                        </includes>
+                        <config>
+                            <fmp-service>
+                                <type>NodePort</type>
+                                <port>80</port>
+                                <expose>true</expose>
+                            </fmp-service>
+                        </config>
+                    </enricher>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
