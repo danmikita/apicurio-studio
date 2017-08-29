@@ -1,4 +1,11 @@
 swarm:
+  datasources:
+      data-sources:
+        ApicurioDS:
+          driver-name: h2
+          connection-url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+          user-name: sa
+          password: sa
   deployment:
     apicurio-studio-api.war:
       web:
@@ -8,5 +15,4 @@ swarm:
           - url-pattern: /apicurio-api
             methods: [GET]
             roles: [admin]
-
   logging: DEBUG
