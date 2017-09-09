@@ -1,0 +1,7 @@
+{
+  "realm": "apicurio-local",
+  "auth-server-url": "https://www.snyder616.com/auth",
+  "ssl-required": "none",
+  "resource": "apicurio-studio",
+  "public-client": true
+}

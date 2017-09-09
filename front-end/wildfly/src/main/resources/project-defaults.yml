@@ -1,0 +1,19 @@
+swarm:
+  logging: DEBUG
+  deployment:
+      apicurio-studio.war:
+        web:
+          login-config:
+            auth-method: KEYCLOAK
+          security-constraints:
+            - url-pattern: /apicurio-studio
+              methods: [GET]
+              roles: [admin]
+  security:
+    security-domains:
+      keycloak:
+        classic-authentication:
+          login-modules:
+            KeycloakLoginModule:
+              code: org.keycloak.adapters.jboss.KeycloakLoginModule
+              flag: required
