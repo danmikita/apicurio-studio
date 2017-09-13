@@ -141,7 +141,7 @@ public class AccountsResource implements IAccountsResource {
             byte[] check = md.digest(input.getBytes(StandardCharsets.UTF_8));
             String hash = Base64Url.encode(check);
             String accountLinkUrl = KeycloakUriBuilder.fromUri(authServerRootUrl)
-                             .path("/auth/realms/{realm}/broker/{provider}/link")
+                             .path("/realms/{realm}/broker/{provider}/link")
                              .queryParam("nonce", nonce)
                              .queryParam("hash", hash)
                              .queryParam("client_id", clientId)
@@ -235,7 +235,7 @@ public class AccountsResource implements IAccountsResource {
             session.getToken().getSessionState();
 
             String url = KeycloakUriBuilder.fromUri(authServerRootUrl)
-                             .path("/auth/realms/{realm}/account/federated-identity-update")
+                             .path("/realms/{realm}/account/federated-identity-update")
                              .queryParam("action", "REMOVE")
                              .queryParam("provider_id", provider).build(realm).toString();
             logger.debug("Deleting identity provider using URL: {}", url);

@@ -31,14 +31,14 @@ public abstract class Configuration {
      * @return the configured Keycloak auth URL
      */
     public String getKeycloakAuthUrl() {
-        return getConfigurationProperty(KC_AUTH_URL_ENV, KC_AUTH_URL_SYSPROP, "https://localhost:8443/auth");
+        return getConfigurationProperty(KC_AUTH_URL_ENV, KC_AUTH_URL_SYSPROP, "https://www.snyder616.com/auth");
     }
 
     /**
      * @return the configured Keycloak realm
      */
     public String getKeycloakRealm() {
-        return getConfigurationProperty(KC_AUTH_REALM_ENV, KC_AUTH_REALM_SYSPROP, "apicurio");
+        return getConfigurationProperty(KC_AUTH_REALM_ENV, KC_AUTH_REALM_SYSPROP, "apicurio-local");
     }
 
     /**
