@@ -599,7 +599,7 @@
         <module>shared</module>
         <module>back-end</module>
         <module>front-end</module>
-        <module>distro</module>
+        <!--module>distro</module-->
         <module>tools</module>
     </modules>
     <profiles>
