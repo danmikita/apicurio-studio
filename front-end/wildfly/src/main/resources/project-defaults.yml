@@ -17,3 +17,33 @@ swarm:
             KeycloakLoginModule:
               code: org.keycloak.adapters.jboss.KeycloakLoginModule
               flag: required
+  network:
+    socket-binding-groups:
+      standard-sockets:
+        outbound-socket-bindings:
+          backend:
+            remote-host: apicurio-studio-be-hub-api
+            remote-port: 8080
+  undertow:
+    servers:
+      default-server:
+        default-host: default-host
+        hosts:
+          default-host:
+            filter-refs:
+              api-hub-filter:
+                predicate: path-prefix('/api-hub')
+            locations:
+              api-hub-location:
+                handler: backend
+    handler-configuration:
+      reverse-proxies:
+        backend:
+          hosts:
+            api-hub:
+              path: /api-hub
+              outbound-socket-binding: backend
+    filter-configuration:
+      expression-filters:
+        api-hub-filter:
+          expression: reverse-proxy({'http://apicurio-studio-fe-wildfly','http://apicurio-studio-be-hub-api'})
