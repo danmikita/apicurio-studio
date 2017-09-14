@@ -599,8 +599,6 @@
         <module>shared</module>
         <module>back-end</module>
         <module>front-end</module>
-        <!--module>distro</module-->
-        <module>tools</module>
     </modules>
     <profiles>
         <profile>
@@ -649,6 +647,16 @@
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+        <profile>
+            <id>quickstart</id>
+            <modules>
+                <module>shared</module>
+                <module>back-end</module>
+                <module>front-end</module>
+                <module>distro</module>
+                <module>tools</module>
+            </modules>
         </profile>
     </profiles>
 </project>
